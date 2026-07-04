@@ -44,3 +44,29 @@ export function getBookEntry(id: string): { heading: string; text: string; sideN
     ? { heading: c.heading || c.title, text: c.text, sideNote: (c as { sideNote?: string }).sideNote }
     : undefined;
 }
+
+// ---------- 典籍库（可读 markdown 文档，供宿主直接渲染）----------
+// 图片链接已改写为 GitHub raw 绝对地址，站内 .md 链接为 docs 根相对路径。
+import docsData from './data/docs.json';
+
+export interface DocMeta {
+  /** docs 根相对路径，如 'book/senji-ryakketsu.md' */
+  path: string;
+  /** 文档标题（首个一级标题） */
+  title: string;
+  /** 分组：book（原文合订本）/ algorithm（算法说明） */
+  group: string;
+}
+
+/** 典籍文档目录（原文合订本 + 算法说明/存疑清单） */
+export function getDocsManifest(): DocMeta[] {
+  return docsData.manifest as DocMeta[];
+}
+
+/** 取某篇文档的 markdown 正文（path 用 manifest 中的值） */
+export function getDocMarkdown(path: string): string | undefined {
+  return (docsData.docs as Record<string, string>)[path];
+}
+
+/** 图片 raw 基地址（宿主如需自行拼接资源可用） */
+export const docsImageBase = docsData.imageBase;

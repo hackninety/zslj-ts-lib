@@ -194,3 +194,18 @@ describe('库层 API', () => {
     expect(getBookEntry('2603')?.text).toContain('上剋下');
   });
 });
+
+describe('典籍文档导出', () => {
+  it('getDocsManifest 列出合订本与算法说明', async () => {
+    const { getDocsManifest, getDocMarkdown, docsImageBase } = await import('../index');
+    const man = getDocsManifest();
+    expect(man.length).toBeGreaterThanOrEqual(3);
+    expect(man.some((d) => d.path === 'book/senji-ryakketsu.md' && d.group === 'book')).toBe(true);
+    expect(man.some((d) => d.group === 'algorithm')).toBe(true);
+    const bk = getDocMarkdown('book/senji-ryakketsu.md')!;
+    expect(bk).toContain('占事略決');
+    expect(bk.includes('<a id')).toBe(false); // 无锚点残留
+    expect(/!\[[^\]]*\]\(https:\/\/raw\.githubusercontent/.test(bk)).toBe(true); // 图片为 raw 绝对地址
+    expect(docsImageBase).toContain('raw.githubusercontent.com');
+  });
+});
