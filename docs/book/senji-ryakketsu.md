@@ -918,7 +918,7 @@
 
 占事略決抄本 / 占事略決跋　京都大學附屬圖書館藏
 
-安倍晴明著.漢文.時間不明,有皇紀一六三九年說.(依[京大藏本](http://ddb.libnet.kulib.kyoto-u.ac.jp/exhibit/s100/image/1/s100s0001.html)奧書有己卯年云云)
+安倍晴明著.漢文.時間不明,有皇紀一六三九年說.(依[京大藏本](https://rmda.kulib.kyoto-u.ac.jp/item/rb00008037)奧書有己卯年云云)
 
 天元六年者,皇紀一六四四年,與已卯年(一六三九年)有所出入,且最古藏本無此句,是取信難.
 
@@ -1016,7 +1016,7 @@ http://applepig.idv.tw/kuon/furu/explain/meisi/onmyouji/senji/senjiryakuketu.htm
 
 ### １４【指年】
 
-　指年法，[京都大學藏本](http://ddb.libnet.kulib.kyoto-u.ac.jp/exhibit/s100/image/1/s100s0037.html)『占事略決』奧書所載，不見於他本。遂，不錄正文，轉錄於此。
+　指年法，[京都大學藏本](https://rmda.kulib.kyoto-u.ac.jp/item/rb00008037)『占事略決』奧書所載，不見於他本。遂，不錄正文，轉錄於此。
 
 指年法　京大藏本奧書所載
 
