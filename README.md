@@ -1,5 +1,12 @@
 # zslj-ts-lib
 
+> **维护位置已迁移**：后续源码、问题反馈和独立版本发布统一位于 [common-ts-lib/packages/zslj-ts-lib](https://github.com/hackninety/common-ts-lib/tree/main/packages/zslj-ts-lib)。包名与公开接口保留，本仓库保留历史，不再作为新版本安装来源。
+>
+> 当前安装：`npm install https://github.com/hackninety/common-ts-lib/releases/download/zslj-ts-lib-v0.1.1/zslj-ts-lib-0.1.1.tgz`
+>
+> 以下为迁移前的历史说明，其中旧仓库安装命令仅供追溯；新的开发和发布流程见 [迁移说明](https://github.com/hackninety/common-ts-lib/blob/main/MIGRATION.md)。
+
+
 《占事略決》（天文博士安倍晴明撰，约 983 年）六壬式占**古法排盘引擎**。TypeScript，零 UI 依赖，唯一运行时依赖 [tyme4ts](https://github.com/6tail/tyme4ts)（MIT）。
 
 与通行（明清《六壬大全》系）大六壬不同，本库严格按原书三十六法实现——涉害只论孟深仲半季浅、贵人旦暮以寅~酉为界、九法无别责、伏吟刑冲取传、卅六卦课体——每个结果都携带原文锚点（`refs`），可溯源到条文。原书第廿六章「假令」课例即黄金测试用例（`npm test`，21 用例）。
